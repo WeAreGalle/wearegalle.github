@@ -1,7 +1,7 @@
-title: "WeAreGalle"
+title: "SKIDDOW"
 email:
 timezone: UTC
-baseurl: "/web"
+baseurl: "/"
 permalink: "/:title/"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
@@ -54,5 +54,3 @@ plugins:
 - jekyll-feed
 - jekyll-seo-tag
 - jekyll-archives
-
-theme: jekyll-theme-cayman
