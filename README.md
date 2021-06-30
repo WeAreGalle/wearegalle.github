@@ -1,1 +1,0 @@
-# WeAreGalle Webpage
