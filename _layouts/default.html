@@ -13,8 +13,6 @@
 
 <!-- custom CSS - Remove this if you don't use it or choose to customize the stylesheet with sass-->
 <link href="{{ site.baseurl }}/assets/css/custom.css" rel="stylesheet">
-<link href="{{ site.baseurl }}/assets/css/gl.css" rel="stylesheet">
-<link href="{{ site.baseurl }}/assets/css/mapbox-gl.css" rel="stylesheet">
 <!-- custom CSS end-->
 
 {% if jekyll.environment == "production" %}
@@ -36,457 +34,62 @@ gtag('config', '{{site.ganalytics}}');
 
 <!-- Menu Navigation
 ================================================== -->
+<div class="navigation-wrap start-header start-style">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
 
-
-<nav class="navbar navbar-expand-lg navbar-light bg-white">
-  <div class="container">
-
-    <!-- Brand -->
-    <a class="navbar-brand" href="./index.html">
-      <img src="./assets/img/brand.svg" class="navbar-brand-img" alt="...">
-    </a>
-
-    <!-- Toggler -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Collapse -->
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-
-      <!-- Toggler -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fe fe-x"></i>
-      </button>
-
-      <!-- Navigation -->
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="navbarLandings" data-bs-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
-            Landings
+          <a class="navbar-brand text-dark font-weight-bold big d-flex align-items-center" href="{{site.baseurl}}/">
+          {% if site.logo %}
+          <img class="mr-2" src="{{site.baseurl}}/{{site.logo}}" alt="logo">
+          {% else %}
+          <span class="d-none d-md-inline-block">{{ site.title }}</span>
+          {% endif %}
           </a>
-          <div class="dropdown-menu dropdown-menu-xl p-0" aria-labelledby="navbarLandings">
-            <div class="row gx-0">
-              <div class="col-12 col-lg-6">
-                <div class="dropdown-img-start" style="background-image: url(./assets/img/photos/photo-3.jpg);">
 
-                  <!-- Heading -->
-                  <h4 class="fw-bold text-white mb-0">
-                    Want to see an overview?
-                  </h4>
 
-                  <!-- Text -->
-                  <p class="fs-sm text-white">
-                    See all the pages at once.
-                  </p>
+          <div class="d-flex align-items-center">
 
-                  <!-- Button -->
-                  <a href="./overview.html" class="btn btn-sm btn-white shadow-dark fonFt-size-sm">
-                    View all pages
-                  </a>
+            <!-- <span class="ml-3 text-muted small">Follow</span> -->
 
-                </div>
-              </div>
-              <div class="col-12 col-lg-6">
-                <div class="dropdown-body">
-                  <div class="row gx-0">
-                    <div class="col-6">
+            <a class="d-inline-block social-icon" target="_blank" href="{{site.social.twitter}}">
+              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+              <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+            </svg>
+            </a>
 
-                      <!-- Heading -->
-                      <h6 class="dropdown-header">
-                        Services
-                      </h6>
+            <a class="d-inline-block social-icon" target="_blank" href="{{site.social.instagram}}">
+              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+            </svg>
+            </a>
 
-                      <!-- List -->
-                      <a class="dropdown-item" href="./coworking.html">
-                        Coworking
-                      </a>
-                      <a class="dropdown-item" href="./rental.html">
-                        Rental
-                      </a>
-                      <a class="dropdown-item mb-5" href="./job.html">
-                        Job Listing
-                      </a>
+            <a class="d-inline-block social-icon" target="_blank" href="{{site.social.facebook}}">
+              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+            </svg>
+            </a>
 
-                      <!-- Heading -->
-                      <h6 class="dropdown-header">
-                        Apps
-                      </h6>
-
-                      <!-- List -->
-                      <a class="dropdown-item" href="./desktop-app.html">
-                        Desktop
-                      </a>
-                      <a class="dropdown-item" href="./mobile-app.html">
-                        Mobile
-                      </a>
-
-                    </div>
-                    <div class="col-6">
-
-                      <!-- Heading -->
-                      <h6 class="dropdown-header">
-                        Web
-                      </h6>
-
-                      <!-- List -->
-                      <a class="dropdown-item" href="./index.html">
-                        Basic
-                      </a>
-                      <a class="dropdown-item" href="./startup.html">
-                        Startup
-                      </a>
-                      <a class="dropdown-item" href="./enterprise.html">
-                        Enterprise
-                      </a>
-                      <a class="dropdown-item" href="./service.html">
-                        Service
-                      </a>
-                      <a class="dropdown-item" href="./cloud.html">
-                        Cloud Hosting
-                      </a>
-                      <a class="dropdown-item" href="./agency.html">
-                        Agency
-                      </a>
-                      <a class="dropdown-item" href="./framework.html">
-                        Framework <span class="h6 text-uppercase text-primary">(new)</span>
-                      </a>
-
-                    </div>
-                  </div> <!-- / .row -->
-                </div>
-              </div>
-            </div> <!-- / .row -->
           </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="navbarPages" data-bs-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
-            Pages
-          </a>
-          <div class="dropdown-menu dropdown-menu-lg" aria-labelledby="navbarPages">
-            <div class="row gx-0">
-              <div class="col-6">
-                <div class="row gx-0">
-                  <div class="col-12 col-lg-6">
 
-                    <!-- Heading -->
-                    <h6 class="dropdown-header">
-                      Career
-                    </h6>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+              <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+            </svg>
+          </button>
 
-                    <!-- List -->
-                    <a class="dropdown-item" href="./careers.html">
-                      Listing
-                    </a>
-                    <a class="dropdown-item mb-5" href="./career-single.html">
-                      Opening
-                    </a>
-
-                    <!-- Heading -->
-                    <h6 class="dropdown-header">
-                      Company
-                    </h6>
-
-                    <!-- List -->
-                    <a class="dropdown-item" href="./about.html">
-                      About
-                    </a>
-                    <a class="dropdown-item" href="./pricing.html">
-                      Pricing
-                    </a>
-                    <a class="dropdown-item mb-5 mb-lg-0" href="./terms-of-service.html">
-                      Terms
-                    </a>
-
-                  </div>
-                  <div class="col-12 col-lg-6">
-
-                    <!-- Heading -->
-                    <h6 class="dropdown-header">
-                      Help center
-                    </h6>
-
-                    <!-- List -->
-                    <a class="dropdown-item" href="./help-center.html">
-                      Overview
-                    </a>
-                    <a class="dropdown-item mb-5" href="./help-center-article.html">
-                      Article
-                    </a>
-
-                    <!-- Heading -->
-                    <h6 class="dropdown-header">
-                      Contact
-                    </h6>
-
-                    <!-- List -->
-                    <a class="dropdown-item" href="./contact.html">
-                      Basic
-                    </a>
-                    <a class="dropdown-item" href="./contact-alt.html">
-                      Cover
-                    </a>
-
-                  </div>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="row gx-0">
-                  <div class="col-12 col-lg-6">
-
-                    <!-- Heading -->
-                    <h6 class="dropdown-header">
-                      Blog
-                    </h6>
-
-                    <!-- List -->
-                    <a class="dropdown-item" href="./blog.html">
-                      Rich View
-                    </a>
-                    <a class="dropdown-item" href="./blog-post.html">
-                      Article
-                    </a>
-                    <a class="dropdown-item" href="./blog-showcase.html">
-                      Showcase
-                    </a>
-                    <a class="dropdown-item mb-5 mb-lg-0" href="./blog-search.html">
-                      Search
-                    </a>
-
-                  </div>
-                  <div class="col-12 col-lg-6">
-
-                    <!-- Heading -->
-                    <h6 class="dropdown-header">
-                      Portfolio
-                    </h6>
-
-                    <!-- List -->
-                    <a class="dropdown-item" href="./portfolio-masonry.html">
-                      Masonry
-                    </a>
-                    <a class="dropdown-item" href="./portfolio-grid-rows.html">
-                      Grid Rows
-                    </a>
-                    <a class="dropdown-item" href="./portfolio-parallax.html">
-                      Parallax
-                    </a>
-                    <a class="dropdown-item" href="./portfolio-case-study.html">
-                      Case Study
-                    </a>
-                    <a class="dropdown-item" href="./portfolio-sidebar.html">
-                      Sidebar
-                    </a>
-                    <a class="dropdown-item" href="./portfolio-sidebar-fluid.html">
-                      Sidebar: Fluid
-                    </a>
-                    <a class="dropdown-item" href="./portfolio-grid.html">
-                      Basic Grid
-                    </a>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> <!-- / .row -->
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="navbarAccount" data-bs-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
-            Account
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarAccount">
-            <li class="dropdown-item dropend">
-              <a class="dropdown-link dropdown-toggle" data-bs-toggle="dropdown" href="#">
-                Settings
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="./account-general.html">
-                  General
-                </a>
-                <a class="dropdown-item" href="./account-security.html">
-                  Security
-                </a>
-                <a class="dropdown-item" href="./account-notifications.html">
-                  Notifications
-                </a>
-                <a class="dropdown-item" href="./billing-plans-and-payment.html">
-                  Plans &amp; Payment
-                </a>
-                <a class="dropdown-item" href="./billing-users.html">
-                  Users
-                </a>
-              </div>
-            </li>
-            <li class="dropdown-item dropend">
-              <a class="dropdown-link dropdown-toggle" data-bs-toggle="dropdown" href="#">
-                Sign In
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="./signin-cover.html">
-                  Side Cover
-                </a>
-                <a class="dropdown-item" href="./signin-illustration.html">
-                  Illustration
-                </a>
-                <a class="dropdown-item" href="./signin.html">
-                  Basic
-                </a>
-                <a class="dropdown-item" data-bs-toggle="modal" href="#modalSigninHorizontal">
-                  Modal Horizontal
-                </a>
-                <a class="dropdown-item" data-bs-toggle="modal" href="#modalSigninVertical">
-                  Modal Vertical
-                </a>
-              </div>
-            </li>
-            <li class="dropdown-item dropend">
-              <a class="dropdown-link dropdown-toggle" data-bs-toggle="dropdown" href="#">
-                Sign Up
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="./signup-cover.html">
-                  Side Cover
-                </a>
-                <a class="dropdown-item" href="./signup-illustration.html">
-                  Illustration
-                </a>
-                <a class="dropdown-item" href="./signup.html">
-                  Basic
-                </a>
-                <a class="dropdown-item" data-bs-toggle="modal" href="#modalSignupHorizontal">
-                  Modal Horizontal
-                </a>
-                <a class="dropdown-item" data-bs-toggle="modal" href="#modalSignupVertical">
-                  Modal Vertical
-                </a>
-              </div>
-            </li>
-            <li class="dropdown-item dropend">
-              <a class="dropdown-link dropdown-toggle" data-bs-toggle="dropdown" href="#">
-                Password Reset
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="./password-reset-cover.html">
-                  Side Cover
-                </a>
-                <a class="dropdown-item" href="./password-reset-illustration.html">
-                  Illustration
-                </a>
-                <a class="dropdown-item" href="./password-reset.html">
-                  Basic
-                </a>
-              </div>
-            </li>
-            <li class="dropdown-item dropend">
-              <a class="dropdown-link dropdown-toggle" data-bs-toggle="dropdown" href="#">
-                Error
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="./error-cover.html">
-                  Side Cover
-                </a>
-                <a class="dropdown-item" href="./error-illustration.html">
-                  Illustration
-                </a>
-                <a class="dropdown-item" href="./error.html">
-                  Basic
-                </a>
-              </div>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="navbarDocumentation" data-bs-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
-            Documentation
-          </a>
-          <div class="dropdown-menu dropdown-menu-md" aria-labelledby="navbarDocumentation">
-            <div class="list-group list-group-flush">
-              <a class="list-group-item" href="./docs/index.html">
-
-                <!-- Icon -->
-                <div class="icon icon-sm text-primary">
-                  <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"></path><path d="M8 3v.5A1.5 1.5 0 009.5 5h5A1.5 1.5 0 0016 3.5V3h2a2 2 0 012 2v16a2 2 0 01-2 2H6a2 2 0 01-2-2V5a2 2 0 012-2h2z" fill="#335EEA" opacity=".3"></path><path d="M11 2a1 1 0 012 0h1.5a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-5a.5.5 0 01-.5-.5v-1a.5.5 0 01.5-.5H11z" fill="#335EEA"></path><rect fill="#335EEA" opacity=".3" x="7" y="10" width="5" height="2" rx="1"></rect><rect fill="#335EEA" opacity=".3" x="7" y="14" width="9" height="2" rx="1"></rect></g></svg>                </div>
-
-                <!-- Content -->
-                <div class="ms-4">
-
-                  <!-- Heading -->
-                  <h6 class="fw-bold text-uppercase text-primary mb-0">
-                    Documentation
-                  </h6>
-
-                  <!-- Text -->
-                  <p class="fs-sm text-gray-700 mb-0">
-                    Customizing and building
-                  </p>
-
-                </div>
-
-              </a>
-              <a class="list-group-item" href="./docs/alerts.html">
-
-                <!-- Icon -->
-                <div class="icon icon-sm text-primary">
-                  <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"></path><rect fill="#335EEA" x="4" y="4" width="7" height="7" rx="1.5"></rect><path d="M5.5 13h4a1.5 1.5 0 011.5 1.5v4A1.5 1.5 0 019.5 20h-4A1.5 1.5 0 014 18.5v-4A1.5 1.5 0 015.5 13zm9-9h4A1.5 1.5 0 0120 5.5v4a1.5 1.5 0 01-1.5 1.5h-4A1.5 1.5 0 0113 9.5v-4A1.5 1.5 0 0114.5 4zm0 9h4a1.5 1.5 0 011.5 1.5v4a1.5 1.5 0 01-1.5 1.5h-4a1.5 1.5 0 01-1.5-1.5v-4a1.5 1.5 0 011.5-1.5z" fill="#335EEA" opacity=".3"></path></g></svg>                </div>
-
-                <!-- Content -->
-                <div class="ms-4">
-
-                  <!-- Heading -->
-                  <h6 class="fw-bold text-uppercase text-primary mb-0">
-                    Components
-                  </h6>
-
-                  <!-- Text -->
-                  <p class="fs-sm text-gray-700 mb-0">
-                    Full list of components
-                  </p>
-
-                </div>
-
-              </a>
-              <a class="list-group-item" href="./docs/changelog.html">
-
-                <!-- Icon -->
-                <div class="icon icon-sm text-primary">
-                  <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"></path><path d="M5.857 2h7.88a1.5 1.5 0 01.968.355l4.764 4.029A1.5 1.5 0 0120 7.529v12.554c0 1.79-.02 1.917-1.857 1.917H5.857C4.02 22 4 21.874 4 20.083V3.917C4 2.127 4.02 2 5.857 2z" fill="#335EEA" opacity=".3"></path><rect fill="#335EEA" x="6" y="11" width="9" height="2" rx="1"></rect><rect fill="#335EEA" x="6" y="15" width="5" height="2" rx="1"></rect></g></svg>                </div>
-
-                <!-- Content -->
-                <div class="ms-4">
-
-                  <!-- Heading -->
-                  <h6 class="fw-bold text-uppercase text-primary mb-0">
-                    Changelog
-                  </h6>
-
-                  <!-- Text -->
-                  <p class="fs-sm text-gray-700 mb-0">
-                    Keep track of changes
-                  </p>
-
-                </div>
-
-                <!-- Badge -->
-                <span class="badge rounded-pill bg-primary-soft ms-auto">
-                  2.0.0
-                </span>
-
-              </a>
-            </div>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto font-weight-bold d-flex align-items-center">
+              {% for item in site.data.menus.topmenu %}
+              <li class="nav-item">
+                <a class="nav-link px-3 {% if item.class %}{{item.class}}{% endif %}" href="{% unless item.external %}{{site.baseurl}}/{% endunless %}{{item.url}}" alt="{{item.title}}">{{item.title}}</a>
+              </li>
+              {% endfor %}
+            </ul>
           </div>
-        </li>
-      </ul>
 
-      <!-- Button -->
-      <a class="navbar-btn btn btn-sm btn-primary lift ms-auto" href="https://themes.getbootstrap.com/product/landkit/" target="_blank">
-        Buy now
-      </a>
-
+        </div>
+      </nav>
     </div>
-
-  </div>
-</nav>
-
 
 
 <!-- Container
@@ -515,23 +118,9 @@ gtag('config', '{{site.ganalytics}}');
 
 <!-- JavaScript
 ================================================== -->
-<!--
 <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
 <script src="{{ site.baseurl }}/assets/js/bootstrap.min.js"></script>
 <script src="{{ site.baseurl }}/assets/js/theme.js"></script>
-
--->
-
-
- <!-- Map JS -->
- <script src='{{ site.baseurl }}/assets/js/mapbox-gl.js'></script>
-    
- <!-- Vendor JS -->
- <script src="{{ site.baseurl }}/assets/js/vendor.bundle.js"></script>
- 
- <!-- Theme JS -->
- <script src="{{ site.baseurl }}/assets/js/theme.bundle.js"></script>
-
 
 </body>
 
