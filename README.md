@@ -1,5 +1,5 @@
-# Skiddow's web page
+# Affiliates - Free Jekyll Theme
 
-## view this site: https://skiddow.github.io/skiddow.com/
+[Live Demo](https://wowthemesnet.github.io/affiliates-jekyll-theme/) | [Docs & Download](https://bootstrapstarter.com/template-affiliates-bootstrap-jekyll/) |  [Buy me a coffee](https://www.wowthemes.net/donate/)
 
-#### Theme by WowThemes: https://github.com/wowthemesnet/affiliates-jekyll-theme
+![jekyll-affiliates-theme](https://bootstrapstarter.com/assets/img/themes/affiliates-jekyll.jpg)
